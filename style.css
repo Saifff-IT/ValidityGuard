@@ -35,9 +35,11 @@ nav ul li a {
 }
 main {
   min-height: calc(100vh - 120px);
-  width: 40vw;
   padding: 10px 20px;
   font-family: "Baloo Bhai 2";
+}
+main p {
+  width: 40vw;
 }
 footer {
   background-color: black;
@@ -58,6 +60,7 @@ form {
 }
 form input {
   height: 100%;
+  width: 250px;
   font-family: "Baloo Bhai 2";
   font-size: 20px;
   padding: 0 10px;
@@ -72,6 +75,7 @@ input::placeholder {
 }
 form button {
   height: 100%;
+  width: 100px;
   border-radius: 10px;
   cursor: pointer;
   border: none;
@@ -96,20 +100,26 @@ form button:active {
   margin: 20px 0;
 }
 @media screen and (max-width: 800px) {
-  main {
-    width: 100vw;
+  main p {
+    width: 90vw;
   }
 }
 @media screen and (max-width: 500px) {
+  main {
+    padding: 0 5px;
+  }
   nav {
     flex-direction: column;
     padding: 20px 0;
     justify-content: center;
+    height: auto;
+    padding: 10px 0;
+    gap: 10px;
   }
   form {
     flex-direction: column;
   }
-  input {
+  form input {
     width: 60vw;
   }
   #btn {
@@ -119,9 +129,8 @@ form button:active {
   }
   nav ul {
     gap: 15px;
-  }
-  nav {
-    padding: 0;
+    flex-direction: column;
+    align-items: center;
   }
   nav ul li a {
     font-size: 14px;
@@ -132,6 +141,7 @@ form button:active {
   footer {
     font-size: 14px;
     margin-top: 10px;
+    height: auto;
   }
   form input {
     font-size: 15px;
