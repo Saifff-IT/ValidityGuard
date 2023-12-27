@@ -18,6 +18,9 @@ nav ul {
   list-style: none;
   gap: 25px;
 }
+img[src="logo"] {
+  width: 40px;
+}
 nav .logo {
   display: flex;
   align-items: center;
@@ -54,7 +57,6 @@ form {
   margin: 10px 0;
 }
 form input {
-  flex: 2;
   height: 100%;
   font-family: "Baloo Bhai 2";
   font-size: 20px;
@@ -69,7 +71,6 @@ input::placeholder {
   font-size: 16px;
 }
 form button {
-  flex: 1;
   height: 100%;
   border-radius: 10px;
   cursor: pointer;
@@ -93,4 +94,62 @@ form button:active {
   position: relative;
   left: 100px;
   margin: 20px 0;
+}
+@media screen and (max-width: 800px) {
+  main {
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  nav {
+    flex-direction: column;
+    padding: 20px 0;
+    justify-content: center;
+  }
+  form {
+    flex-direction: column;
+  }
+  input {
+    width: 60vw;
+  }
+  #btn {
+    width: 30vw;
+    font-size: 13px;
+    padding: 5px 0;
+  }
+  nav ul {
+    gap: 15px;
+  }
+  nav {
+    padding: 0;
+  }
+  nav ul li a {
+    font-size: 14px;
+  }
+  main {
+    font-size: 13px;
+  }
+  footer {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  form input {
+    font-size: 15px;
+  }
+  .result {
+    font-size: 15px;
+    left: 0;
+    margin-top: 35px;
+  }
+  .result img {
+    width: 50px;
+  }
+}
+@media screen and (max-width: 250px) {
+  img[src*="logo"] {
+    width: 20px;
+  }
+  .logo {
+    font-size: 14px;
+  }
 }
